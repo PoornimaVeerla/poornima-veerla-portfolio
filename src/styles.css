@@ -182,14 +182,49 @@
 }
 
 @keyframes orbit-spin {
-  to { transform: rotate(360deg); }
+  from { transform: rotateX(68deg) rotateZ(0deg); }
+  to { transform: rotateX(68deg) rotateZ(360deg); }
 }
 
-@utility orbit-slow {
-  animation: orbit-spin 22s linear infinite;
+.portrait-orbit {
+  perspective: 900px;
+  transform-style: preserve-3d;
+}
+
+.orbit-plane {
+  animation: orbit-spin 9s linear infinite;
+  box-shadow: 0 0 22px color-mix(in oklab, var(--primary) 14%, transparent);
+  transform-style: preserve-3d;
+}
+
+.orbit-plane::after {
+  position: absolute;
+  top: 50%;
+  left: -0.45rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 999px;
+  background: var(--primary);
+  box-shadow: 0 0 18px var(--primary);
+  content: "";
+}
+
+.orbit-plane-reverse {
+  animation-direction: reverse;
+  animation-duration: 13s;
+  transform: rotateX(68deg) rotateZ(110deg);
+}
+
+.orbit-plane-reverse::after {
+  right: -0.35rem;
+  left: auto;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: var(--secondary);
+  box-shadow: 0 0 16px var(--secondary);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .orbit-slow { animation: none; }
+  .orbit-plane { animation: none; }
 }

@@ -15,7 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import profileAsset from "@/assets/poornima-veerla-profile.asset.json";
 
-const linkedInUrl = "https://linkedin.com/in/poornimaveerla";
+const linkedInUrl = "https://www.linkedin.com/in/poornimaveerla/";
 const githubUrl = "https://github.com/PoornimaVeerla";
 const emailUrl = "mailto:veerella.poornima369@gmail.com";
 
@@ -160,10 +160,10 @@ function Index() {
           </div>
         </div>
 
-        <div className="relative mx-auto aspect-square w-full max-w-[610px]" aria-hidden="true">
+        <div className="portrait-orbit relative mx-auto aspect-square w-full max-w-[610px]" aria-hidden="true">
           <div className="absolute inset-[12%] rounded-full border border-primary/25" />
-          <div className="orbit-slow absolute inset-[7%] rounded-[50%] border-2 border-primary/75 [transform:rotate(38deg)]" />
-          <div className="orbit-slow absolute inset-[7%] rounded-[50%] border border-secondary/80 [animation-direction:reverse] [transform:rotate(-47deg)]" />
+          <div className="orbit-plane absolute inset-[4%] rounded-full border-2 border-primary/75" />
+          <div className="orbit-plane orbit-plane-reverse absolute inset-[9%] rounded-full border border-secondary/80" />
           <div className="absolute inset-[20%] overflow-hidden rounded-full border border-primary/50 bg-surface shadow-[var(--shadow-glow)]">
             <img src={profileAsset.url} alt="" className="h-full w-full object-cover object-center grayscale-[20%] contrast-110" />
             <div className="absolute inset-0 bg-primary/10 mix-blend-color" />
@@ -308,7 +308,7 @@ function Index() {
             </div>
             <div className="flex flex-col items-start gap-4 lg:items-end">
               <a className="flex items-center gap-3 border-b border-primary-foreground/40 pb-2 font-medium" href={emailUrl}><Mail />veerella.poornima369@gmail.com</a>
-              <a className="flex items-center gap-3 border-b border-primary-foreground/40 pb-2 font-medium" href={linkedInUrl} target="_blank" rel="noreferrer"><Linkedin />linkedin.com/in/poornimaveerla</a>
+              <a className="flex items-center gap-3 border-b border-primary-foreground/40 pb-2 font-medium" href={linkedInUrl} target="_blank" rel="noopener noreferrer"><Linkedin />linkedin.com/in/poornimaveerla</a>
               <a className="flex items-center gap-3 border-b border-primary-foreground/40 pb-2 font-medium" href={githubUrl} target="_blank" rel="noreferrer"><Github />github.com/PoornimaVeerla</a>
             </div>
           </div>
