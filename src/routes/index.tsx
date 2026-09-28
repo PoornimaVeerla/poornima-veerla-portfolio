@@ -139,7 +139,7 @@ function Index() {
           <div className="mb-7 flex items-center gap-3 font-mono text-xs uppercase text-primary">
             <span className="h-px w-10 bg-primary" /> AI & Data Science Student
           </div>
-          <h1 className="font-display text-[clamp(4rem,9vw,8.5rem)] font-bold uppercase leading-[0.78]">
+          <h1 className="font-display text-[3.15rem] font-bold uppercase leading-[0.8] min-[430px]:text-[3.6rem] md:text-[clamp(4rem,9vw,8.5rem)]">
             Poornima<br /><span className="text-outline">Veerla</span>
           </h1>
           <p className="mt-9 max-w-xl text-lg leading-8 text-muted-foreground md:text-xl">
