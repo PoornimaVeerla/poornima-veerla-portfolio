@@ -3,6 +3,7 @@ import {
   ArrowDown,
   ArrowUpRight,
   Award,
+  FileText,
   Github,
   GraduationCap,
   Linkedin,
@@ -124,7 +125,8 @@ function Index() {
             <a className="transition-colors hover:text-primary" href="#about">About</a>
             <a className="transition-colors hover:text-primary" href="#skills">Skills</a>
             <a className="transition-colors hover:text-primary" href="#projects">Projects</a>
-            <a className="transition-colors hover:text-primary" href="#journey">Journey</a>
+            <a className="transition-colors hover:text-primary" href="#journey">Experience</a>
+            <a className="transition-colors hover:text-primary" href="#resume">Resume</a>
             <a className="transition-colors hover:text-primary" href="#contact">Contact</a>
           </div>
           <Button asChild variant="portfolioOutline" size="sm" className="hidden md:inline-flex">
@@ -254,25 +256,51 @@ function Index() {
               ))}
             </div>
           </div>
-          <div className="space-y-4 lg:pt-20">
-            <article className="border border-border bg-surface p-7 md:p-9">
-              <div className="flex items-center gap-3 font-mono text-[10px] text-primary"><Award className="size-4" />CERTIFICATION · APR 2026</div>
-              <h3 className="mt-7 font-display text-2xl font-bold">Deloitte Australia<br />Data Analytics Job Simulation</h3>
-              <p className="mt-4 leading-7 text-muted-foreground">A Forage practical simulation centered on data analytics work and structured problem solving.</p>
-            </article>
-            <article className="border border-border bg-surface p-7 md:p-9">
-              <div className="flex items-center gap-3 font-mono text-[10px] text-primary"><GraduationCap className="size-4" />PRACTICAL LEARNING</div>
-              <h3 className="mt-7 font-display text-2xl font-bold">Data Analytics with Tableau</h3>
-              <p className="mt-4 leading-7 text-muted-foreground">A SmartBridge internship experience focused on turning datasets into visual insights and dashboard-based stories.</p>
-              <a href={linkedInUrl} target="_blank" rel="noreferrer" className="mt-7 flex items-center gap-2 font-mono text-xs text-primary">View profile details <ArrowUpRight className="size-4" /></a>
-            </article>
+          <div className="lg:pt-20">
+            <p className="font-mono text-xs text-primary">04B / EXPERIENCE</p>
+            <h2 className="mt-5 font-display text-4xl font-bold md:text-6xl">Practice into<br />perspective.</h2>
+            <div className="mt-12 border-t border-border">
+              <article className="grid gap-5 border-b border-border py-8 sm:grid-cols-[48px_1fr]">
+                <Award className="size-6 text-primary" aria-hidden="true" />
+                <div>
+                  <p className="font-mono text-[10px] text-primary">JOB SIMULATION · FORAGE</p>
+                  <h3 className="mt-3 font-display text-2xl font-bold">Deloitte Australia Data Analytics</h3>
+                  <p className="mt-4 leading-7 text-muted-foreground">A practical simulation centered on data analytics work and structured problem solving.</p>
+                </div>
+              </article>
+              <article className="grid gap-5 border-b border-border py-8 sm:grid-cols-[48px_1fr]">
+                <GraduationCap className="size-6 text-primary" aria-hidden="true" />
+                <div>
+                  <p className="font-mono text-[10px] text-primary">INTERNSHIP · SMARTBRIDGE</p>
+                  <h3 className="mt-3 font-display text-2xl font-bold">Data Analytics with Tableau</h3>
+                  <p className="mt-4 leading-7 text-muted-foreground">Practical experience focused on turning datasets into visual insights and dashboard-based stories.</p>
+                  <a href={linkedInUrl} target="_blank" rel="noreferrer" className="mt-6 flex items-center gap-2 font-mono text-xs text-primary">View profile details <ArrowUpRight className="size-4" /></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" className="border-y border-border bg-surface/45">
+        <div className="mx-auto grid max-w-[1440px] gap-10 px-6 py-20 md:px-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:px-16 lg:py-28">
+          <div>
+            <p className="font-mono text-xs text-primary">05 / RESUME</p>
+            <h2 className="mt-5 font-display text-4xl font-bold md:text-6xl">Education, skills,<br />and work in one view.</h2>
+          </div>
+          <div className="max-w-2xl lg:justify-self-end">
+            <FileText className="size-8 text-primary" aria-hidden="true" />
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">Review my current education, practical experience, projects, and technical interests through my verified LinkedIn profile.</p>
+            <Button asChild variant="portfolio" size="lg" className="mt-8">
+              <a href={linkedInUrl} target="_blank" rel="noreferrer">View resume on LinkedIn <ArrowUpRight aria-hidden="true" /></a>
+            </Button>
           </div>
         </div>
       </section>
 
       <section id="contact" className="border-t border-border bg-primary text-primary-foreground">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 lg:px-16 lg:py-28">
-          <p className="font-mono text-xs">05 / LET’S CONNECT</p>
+          <p className="font-mono text-xs">06 / LET’S CONNECT</p>
           <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <h2 className="max-w-5xl font-display text-5xl font-bold leading-[0.95] md:text-7xl lg:text-8xl">Let’s build something meaningful.</h2>
