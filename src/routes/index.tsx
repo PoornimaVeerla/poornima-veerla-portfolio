@@ -26,12 +26,9 @@ const skills = [
   "Data Analytics",
   "Tableau",
   "Data Visualization",
-  "Java Full Stack",
   "Data Structures",
   "Data Modeling",
-  "Web Security",
   "Computer Networking",
-  "Log Analysis",
 ];
 
 const projects = [
